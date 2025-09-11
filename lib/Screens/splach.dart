@@ -39,7 +39,11 @@ class _SplashScreenState extends State<SplashScreen> {
         curve: Curves.easeInOut,
         alignment: _moveUp ? Alignment.topCenter : Alignment.center,
         child: Padding(
+<<<<<<< HEAD
           padding: const EdgeInsets.only(top: 20), 
+=======
+          padding: const EdgeInsets.only(top: 20),
+>>>>>>> 78649ffa871490a052887c2921f676f1502b4ccd
           child: Image.asset(
             'assets/images/ViraRank.png',
             
