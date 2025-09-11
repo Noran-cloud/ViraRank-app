@@ -15,6 +15,22 @@ class _OnBoardingState extends State<OnBoarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: GestureDetector(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> Welcome())),
+              child: Text('Skip', style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.grey,
+            fontSize: 23,
+                    ),),
+            ),
+          )
+        ],
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -24,10 +40,8 @@ class _OnBoardingState extends State<OnBoarding> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset('assets/images/ViraRank.png'),
-                  SizedBox(height: 60),
                   Image.asset('${on_boarding[index]['image']}'),
-                  SizedBox(height: 20),
+                  SizedBox(height: 50),
                   Text(
                     '${on_boarding[index]['text']}',
                     style: TextStyle(
@@ -42,31 +56,17 @@ class _OnBoardingState extends State<OnBoarding> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Thing(index == 0 ? 20 : 10),
-                        Thing(index == 1 ? 20 : 10),
-                        Thing(index == 2 ? 20 : 10),
+                        sliderShow(index == 0 ? 20 : 10),
+                        sliderShow(index == 1 ? 20 : 10),
+                        sliderShow(index == 2 ? 20 : 10),
                       ],
                     ),
                   ),
-                  SizedBox(height: 10 + height),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Welcome(),
-                              ),
-                            );
-                          });
-                        },
-                        mouseCursor: SystemMouseCursors.click,
-                        child: OnBoarding_Buttons('Skip',Colors.white,Colors.grey,Colors.grey),
-                      ),
-                      InkWell(
+                  SizedBox(height: 10 + height),                                  
+                  Align( alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10),
+                      child: GestureDetector(
                         onTap: () {
                           if (index < on_boarding.length - 1) {
                             setState(() {
@@ -80,13 +80,29 @@ class _OnBoardingState extends State<OnBoarding> {
                                 builder: (context) => const Welcome(),
                               ),
                             );
-                          }
+                          }                          
                         },
-                        mouseCursor: SystemMouseCursors.click,
-                        child: OnBoarding_Buttons('Next',Colors.blue,Colors.blue,Colors.white),
+                        
+                        child: Container(
+                          width: 50,height: 50,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(40),
+                          ),
+                          child: Center(
+                            child: Container(
+                              width: 40, height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(20)
+                              ),
+                              child: Icon(Icons.arrow_forward_ios,color: Colors.white,size: 30,),
+                            ),
+                          ),
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -97,35 +113,15 @@ class _OnBoardingState extends State<OnBoarding> {
   }
 }
 
-Widget Thing(double width) {
+Widget sliderShow(double width) {
   return Container(
     width: width,
     height: 4,
     decoration: BoxDecoration(
-      color: Colors.blue,
+      color: Colors.grey,
       borderRadius: BorderRadius.circular(20),
     ),
   );
 }
 
-Widget OnBoarding_Buttons(String txt,Color bgcolor,Color brdcolor,Color fcolor) {
-  return Container(
-    width: 110,
-    height: 55,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-      color: bgcolor,
-      border: BoxBorder.all(color: brdcolor),
-    ),
-    child: Center(
-      child: Text(
-        '$txt',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: fcolor,
-          fontSize: 23,
-        ),
-      ),
-    ),
-  );
-}
+

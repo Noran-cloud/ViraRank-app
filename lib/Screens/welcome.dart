@@ -101,6 +101,7 @@ Widget welcome_buttons(String txt, VoidCallback page) {
         color: Colors.black,
         fontWeight: FontWeight.bold,
         fontSize: 15,
+        fontFamily: 'Ubuntu'
       ),
     ),
   );

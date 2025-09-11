@@ -1,6 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:ieee/Screens/changePassword.dart';
+import 'package:ieee/Screens/home.dart';
 import 'package:ieee/Screens/sign_up.dart';
 
 class SignIn extends StatelessWidget {
@@ -47,14 +49,14 @@ bool isSecure = true;
                     SizedBox(
                       height: 30,
                     ),
-                    Text('Welcome',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),),
-                    Text('Back!',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),),
-                    SizedBox(height: 30,),
+                    Text('Welcome',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'Ubuntu'),),
+                    Text('Back!',style: TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold,fontFamily: 'Ubuntu'),),
+                    SizedBox(height: 50,),
                     Form(
                       key: _formkey,
                       child: Column( crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox( width: 160,
+                          SizedBox( width: 200,
                             child: TextFormField(
                               controller: _emailController,
                               validator: (value) {
@@ -96,11 +98,11 @@ bool isSecure = true;
                     ),
                     Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Sign in',style: TextStyle(color: Colors.black,fontSize: 24,fontWeight: FontWeight.bold),),
+                        Text('Sign in',style: TextStyle(color: Colors.black,fontSize: 24,fontWeight: FontWeight.bold,fontFamily: 'Ubuntu'),),
                         GestureDetector(
                           onTap: () {
                             if(_formkey.currentState!.validate()){
-                             print('Valid Inputs');
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
                             }
                           },
                           child: Container(
@@ -129,9 +131,11 @@ bool isSecure = true;
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
                           },
-                          child: Text('Sign up',style: TextStyle(color: Colors.black,),)),
+                          child: Text('Sign up',style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu'),)),
                         SizedBox(width: 20,),
-                        Text('Forget Password?',style: TextStyle(color: Colors.black,))
+                        GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> Change_password())),
+                          child: Text('Forget Password?',style: TextStyle(color: Colors.black,fontFamily: 'Ubuntu')))
                       ],
                     ),
                     SizedBox(height: 30,),
