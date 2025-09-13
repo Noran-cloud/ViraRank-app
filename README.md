@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 ## ViraRank
-## 📌 Overview
+# 📌 Overview
 
 ViraRank is a Flutter-based application that provides intelligent insights for website owners, marketers, and content creators. The app helps users to:
 
@@ -19,11 +19,11 @@ Analyze posts and predict their likelihood of going viral on selected social med
 
 ViraRank combines AI-powered analysis with a simple and intuitive user interface to deliver reliable results quickly.
 
-## ✨ Features
+# ✨ Features
 
-# 🔑 User Authentication: Easy login and registration process.
+ 🔑 User Authentication: Easy login and registration process.
 
-# 🌐 Website SEO Analyzer:
+ 🌐 Website SEO Analyzer:
 
 Input a website URL.
 
@@ -31,7 +31,7 @@ Automatic scan for SEO factors (Meta tags, Keywords, Mobile-friendliness, Speed,
 
 Display SEO Score and probability of ranking in the Top 10.
 
-# 📊 Virality Prediction:
+ 📊 Virality Prediction:
 
 Upload or write a post.
 
@@ -39,11 +39,11 @@ Select a platform (Facebook, Twitter/X, Instagram, etc.).
 
 AI-based prediction of the post’s virality potential using keywords, hashtags, and expected engagement.
 
-# 📱 Cross-platform: Runs seamlessly on both Android & iOS using Flutter.
+ 📱 Cross-platform: Runs seamlessly on both Android & iOS using Flutter.
 
-# ⚡ Smart Insights: Results are visualized with clear graphs and probability indicators.
+ ⚡ Smart Insights: Results are visualized with clear graphs and probability indicators.
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Frontend: Flutter
 
@@ -53,7 +53,7 @@ AI/ML Models: For probability estimation of SEO compliance & virality prediction
 
 Database: Firestore / MySQL / PostgreSQL (depending on configuration)
 
-## 🚀 How It Works
+# 🚀 How It Works
 
 🧑‍💻 User signs up or logs in.
 
@@ -63,7 +63,7 @@ Database: Firestore / MySQL / PostgreSQL (depending on configuration)
 
 📊 User views results in reports & interactive graphs.
 
-## 🎯 Use Cases
+# 🎯 Use Cases
 
 🔎 Website Owners: Improve SEO compliance and boost Google ranking potential.
 
