@@ -26,7 +26,7 @@ class WebsiteAnalysisCubit extends Cubit<WebsiteAnalysisStates> {
       await githubDio.get(
         options: Options(
           headers: {
-          'Authorization': 'token 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'
+          'Authorization': LocalStorage.githubToken,
         }
         ),
         "https://api.github.com/repos/${githubRepoLinkController.text}/contents/",
@@ -54,7 +54,7 @@ class WebsiteAnalysisCubit extends Cubit<WebsiteAnalysisStates> {
     await codeDio.get(
       options: Options(
         headers: {
-          'Authorization': 'token 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'
+          'Authorization': LocalStorage.githubToken,
         },
       ),
       url,

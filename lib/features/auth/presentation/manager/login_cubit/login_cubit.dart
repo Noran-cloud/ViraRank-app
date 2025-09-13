@@ -38,6 +38,7 @@ class LogInCubit extends Cubit<LogInStates>
       print("data from login request ${onValue.data}");
       loginModel = LoginModel.fromJson(onValue.data);
       LocalStorage.saveToken(loginModel!.token);
+      LocalStorage.saveGithubToken(loginModel!.githubToken);
       print("token is : ${LocalStorage.token}");
       emit(LoginSuccessState(loginModel!));
     }).catchError((error){

@@ -13,4 +13,11 @@ class LocalStorage {
   }
 
   static String? get token => sharedPreferences.getString('token');
+
+
+  static Future<void> saveGithubToken(String token) async {
+    await sharedPreferences.setString('githubToken', token);
+  }
+
+  static String? get githubToken => sharedPreferences.getString('githubToken');
 }
