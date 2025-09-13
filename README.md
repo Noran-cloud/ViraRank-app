@@ -21,27 +21,27 @@ ViraRank combines AI-powered analysis with a simple and intuitive user interface
 
 # ✨ Features
 
- 🔑 User Authentication: Easy login and registration process.
+🔑 Authentication: Secure user registration and login.
 
- 🌐 Website SEO Analyzer:
+🗂️ State Management: Efficient handling of app state using a clean architecture approach.
 
-Input a website URL.
+🌐 API Integration: Connects with external services for SEO analysis and content data.
 
-Automatic scan for SEO factors (Meta tags, Keywords, Mobile-friendliness, Speed, Backlinks, etc.).
+🤖 Integration with AI Model: Machine learning models used for SEO probability scoring and virality prediction.
 
-Display SEO Score and probability of ranking in the Top 10.
+💾 Local Storage: Save user preferences, recent analyses, and offline data.
 
- 📊 Virality Prediction:
+🔄 Version Control: Managed with Git/GitHub for smooth collaboration and continuous development.
 
-Upload or write a post.
+🏗️ MVVM Pattern: Organized codebase following the Model-View-ViewModel design pattern for scalability and maintainability.
 
-Select a platform (Facebook, Twitter/X, Instagram, etc.).
+📊 Website SEO Analyzer: Input website URL, analyze SEO factors (Meta tags, Keywords, Mobile-friendliness, Speed, Backlinks, etc.), and display results with probability scores.
 
-AI-based prediction of the post’s virality potential using keywords, hashtags, and expected engagement.
+📢 Virality Prediction: Analyze posts, select target platform (Facebook, Twitter/X, Instagram, etc.), and estimate the probability of going viral.
 
- 📱 Cross-platform: Runs seamlessly on both Android & iOS using Flutter.
+📱 Cross-platform: Runs seamlessly on both Android & iOS using Flutter.
 
- ⚡ Smart Insights: Results are visualized with clear graphs and probability indicators.
+⚡ Smart Insights: Visualized results with clear graphs and probability indicators.
 
 # 🛠️ Tech Stack
 
