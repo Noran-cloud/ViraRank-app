@@ -6,3 +6,4 @@ const CHANGEPASSWORD = "/auth/change-password";
 
 const SEOANALYZER = "/seo/analyze";
 const TRENDANALYZE = "/trend/analyze";
+const GETPROFILE = "/users/me";

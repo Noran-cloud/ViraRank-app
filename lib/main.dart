@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ieee/Screens/home.dart';
-import 'package:ieee/Screens/posts_analysis_screen/posts_analysis_cubit/posts_analysis_cubit.dart';
-import 'package:ieee/Screens/setting_screens/settings.dart';
-import 'package:ieee/Screens/splach.dart';
-import 'package:ieee/Screens/websites_analysis_screen/webResult.dart';
-
-import 'Screens/websites_analysis_screen/website_analysis_cubit/website_analysis_cubit.dart';
+import 'package:ieee/features/profile/presentation/manager/profile_cubit/profile_cubit.dart';
+import 'package:ieee/features/splash_view.dart';
+import 'features/posts_analysis/presentation/manager/posts_analysis_cubit/posts_analysis_cubit.dart';
+import 'features/websites_analysis_screen/presentation/manager/website_analysis_cubit/website_analysis_cubit.dart';
 import 'network/local/shared_pref.dart';
 import 'network/remote/dio_helper.dart';
 
@@ -31,6 +28,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (BuildContext context) => PostsAnalysisCubit(),
         ),
+        BlocProvider(
+          create: (BuildContext context) => ProfileCubit(),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

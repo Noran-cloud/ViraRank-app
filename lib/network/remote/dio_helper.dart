@@ -11,7 +11,7 @@ class DioHelper {
         connectTimeout: Duration(seconds: 60),
         receiveTimeout: Duration(seconds: 60),
         sendTimeout: Duration(seconds: 60),
-        baseUrl: 'https://d9d354415e50.ngrok-free.app/api',
+        baseUrl: 'https://c76b1ea926cc.ngrok-free.app/api',
         receiveDataWhenStatusError: true,
       ),
     );
