@@ -23,13 +23,13 @@ ViraRank combines AI-powered analysis with a simple and intuitive user interface
 
 🔑 Authentication: Secure user registration and login.
 
-🗂️ State Management: Efficient handling of app state using a clean architecture approach.
+🗂️ State Management (Bloc/Cubit): Efficient handling of app state using a clean architecture approach.
 
 🌐 API Integration: Connects with external services for SEO analysis and content data.
 
 🤖 Integration with AI Model: Machine learning models used for SEO probability scoring and virality prediction.
 
-💾 Local Storage: Save user preferences, recent analyses, and offline data.
+💾 Local Storage: Save user preferences, and offline data.
 
 🔄 Version Control: Managed with Git/GitHub for smooth collaboration and continuous development.
 
@@ -47,11 +47,9 @@ ViraRank combines AI-powered analysis with a simple and intuitive user interface
 
 Frontend: Flutter
 
-Backend: (e.g., Firebase / Node.js / .NET API)
+Backend: .NET API
 
 AI/ML Models: For probability estimation of SEO compliance & virality prediction
-
-Database: Firestore / MySQL / PostgreSQL (depending on configuration)
 
 # 🚀 How It Works
 
